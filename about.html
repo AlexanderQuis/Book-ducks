@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>Book ducks</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Book ducks</h1>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="books.html"  id="books-btn">Books</a>
+			<a href="logout.html" id="logout-btn">Logout</a>
+			<a href="#">About</a>
+		</nav>
+	</header>
+
+	<main>
+		<h1>What is book ducks?</h1>
+		<p>Book ducks is an online library that gives you the ability to read any books from the comfort of your home. Because we believe that information should be available to anyone, all of our books are available for free.</p>
+	</main>
+
+	<script type="text/javascript">
+		if (!sessionStorage.getItem('jwt')) {
+			document.querySelector('#books-btn').classList.add('hidden');
+			document.querySelector('#logout-btn').classList.add('hidden');
+		}
+	</script>
+</body>
+</html>

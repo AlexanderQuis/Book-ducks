@@ -1,0 +1,100 @@
+:root {
+	--global-margin: 100px;
+	--content-padding: 2em;
+
+	--book-padding: 1em;
+	--book-title-bg: #668;
+
+	--teal-50:  #f2f2ff;
+	--teal-100: #ddddff;
+	--teal-200: #c8c8fe;
+	--teal-300: #b2b0fc;
+	--teal-400: #a199f7;
+	--teal-500: #8c79e6;
+	--teal-600: #8c79e6;
+	--teal-700: #816dd7;
+	--teal-800: #7a62cb;
+	--teal-900: #6d4eb4;
+
+	--brown-50:  #ffe4b9;
+	--brown-100: #f0c198;
+	--brown-200: #d09c72;
+	--brown-300: #ac794b;
+	--brown-400: #935e2d;
+	--brown-500: #79450e;
+	--brown-600: #6f3c08;
+	--brown-700: #603000;
+	--brown-800: #532200;
+	--brown-900: #451300;
+
+	--white-50:  #ffffff;
+	--white-100: #fafafa;
+	--white-200: #f5f5f5;
+	--white-300: #f0f0f0;
+	--white-400: #dedede;
+	--white-500: #c2c2c2;
+	--white-600: #979797;
+	--white-700: #818181;
+	--white-800: #606060;
+	--white-900: #3c3c3c;
+}
+
+.hidden {
+	display: none !important;
+}
+
+html {
+	margin: 0;
+	background-color: var(--teal-50);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+}
+
+/* HEADER */
+header {
+	position: sticky;
+	z-index: 100;
+	padding-top: 1em;
+
+	background-color: var(--teal-100);
+	box-shadow: 0px 0px 0px 2px #bbc, 0 -58px 20px 50px #000;
+
+}
+header h1 {
+	margin: 0 var(--global-margin);
+	margin-bottom: 0.4em;
+}
+nav {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5em;
+
+	padding: 0 var(--global-margin);
+	background-color: var(--teal-200);
+}
+
+nav > a {
+	display: block;
+	text-decoration: none;
+	color: black;
+	padding: 0.5em 1em;
+	transition: all 300ms
+}
+
+nav > a:hover {
+	background-color: #aaf;
+	border-radius: 10px;
+	text-decoration: underline;
+}
+
+/* BODY */
+main {
+	padding: 3em var(--content-padding);
+	margin: 0 calc(var(--global-margin) - var(--content-padding));
+
+	background-color: var(--white-50);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>Book ducks</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/books.css">
+</head>
+
+<body>
+	<script type="text/javascript" src="modules/axios.min.js"></script>
+	<script type="text/javascript" src="modules/api.js"></script>
+
+	<header>
+		<h1>Book ducks => Books</h1>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="books.html">Books</a>
+			<a href="logout.html">Logout</a>
+			<a href="about.html">About</a>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Our books</h1>
+		<p>Below is a list of all of our high quality books that are available to members</p>
+
+		<div class="content-nav" id="filter">
+			<p>Filter by:</p>
+			<button>name</button>
+			<button>reviews</button>
+		</div>
+		<div class="content-nav options-nav hidden" id="options">
+			<p>Options:</p>
+			<button class="review-btn" id="btn-dislike">Dislike<img src="svg/thumbs-down.png"></button>
+			<button class="review-btn" id="btn-like">Like<img src="svg/thumbs-up.png"></button>
+			<button id="btn-fav">favorite</button>
+		</div>
+
+		<div class="content" id="books-content"></div>
+		<!--
+		<div class="book-info">
+			<h1>Book info</h1>
+			<p></p>
+		</div>
+	-->
+	</main>
+
+	<script type="text/javascript" src="protected.js"></script>
+	<script type="text/javascript" src="modules/display-books.js"></script>
+
+	<script type="text/javascript">
+		showBooks();
+	</script>
+</body>
+</html>

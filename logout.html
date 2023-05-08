@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>Book ducks</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Book ducks</h1>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="books.html">Books</a>
+			<a href="#">Logout</a>
+			<a href="about.html">About</a>
+		</nav>
+	</header>
+
+	<main>
+		<p>Are you sure you would like to logout?</p>
+		<button id="logout">Logout</button>
+	</main>
+
+	<script type="text/javascript" src="protected.js"></script>
+	<script type="text/javascript">
+		const logoutBtn = document.querySelector('#logout');
+		logoutBtn.addEventListener('click', _ => {
+			sessionStorage.removeItem('jwt');
+			document.location.pathname = '/index.html';
+		})
+	</script>
+</body>
+</html>

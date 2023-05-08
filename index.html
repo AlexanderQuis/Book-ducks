@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>Book ducks</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/books.css">
+</head>
+
+<body>
+	<script type="text/javascript" src="modules/axios.min.js"></script>
+	<script type="text/javascript" src="modules/api.js"></script>
+
+	<header>
+		<h1>Book ducks</h1>
+		<nav>
+			<a href="#">Home</a>
+			<a href="books.html"  id="books-btn">Books</a>
+			<a href="logout.html" id="logout-btn">Logout</a>
+			<a href="about.html">About</a>
+		</nav>
+	</header>
+
+	<main id="guest-screen">
+		<h1>Welcome, new visitor!</h1>
+		<p>It looks like you aren't logged in yet. If you don't have an account yet, feel free to consider signing up in the form below.</p>
+
+		<div class="login-options">
+			<div class="form" id="login-form">
+				<h2>Login</h2>
+				<p>Already registered here before?</p>
+
+				Username: <input type="text" name="username">
+				<br>
+				Password: <input type="password" name="password">
+				<br>
+
+				<p class="error-msg hidden" id="login-err-btn">Failed to login</p>
+				<button id="login-btn">Login</button>
+			</div>
+
+			<div class="form" id="register-form">
+				<h2>Register</h2>
+				<p>Do not have an account? Fill out the form and you'll quickly have an account</p>
+
+				Username: <input type="text" name="username">
+				<br>
+				Email: <input type="email" name="email">
+				<br>
+				Password: <input type="password" name="password">
+				<br>
+
+				<p class="error-msg hidden" id="register-err-btn">Failed to register</p>
+				<button id="register-btn">Register</button>
+			</div>
+		</div>
+	</main>
+
+	<main class="logged-in" id="member-screen">
+		<h1>Welcome, back member!</h1>
+		<p>Consider browising some of our books!</p>
+
+		<h2>Your favorited books</h2>
+		<div class="content-nav options-nav hidden" id="options">
+			<p>Options:</p>
+			<button class="review-btn" id="btn-dislike">Dislike<img src="svg/thumbs-down.png"></button>
+			<button class="review-btn" id="btn-like">Like<img src="svg/thumbs-up.png"></button>
+			<button id="btn-fav">favorite</button>
+		</div>
+
+		<div class="content" id="books-content"></div>
+	</main>
+	
+	<script type="text/javascript" src="modules/display-books.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+		if (jwt) {
+			showBooks(true);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+h2 {
+	margin-top: 0.3em;
+}
+
+.login-options {
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+}
+
+.form {
+	padding: 1em;
+
+	outline: 1px solid #cce;
+	background-color: #ddf;
+	border-radius: 5px;
+}
+
+.form .error-msg {
+	color: red;
+}
+
+.logged-in > h2 {
+	margin-top: 2em;
+}
